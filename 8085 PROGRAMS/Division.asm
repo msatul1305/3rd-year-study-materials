@@ -1,0 +1,6 @@
+	LHLD 3000H
+	MVI C,00H
+	MOV A,H
+	CMP L
+	HLT
+.END

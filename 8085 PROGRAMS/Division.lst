@@ -1,0 +1,7 @@
+0001   0000 2A 00 30    	LHLD 3000H
+0002   0003 0E 00       	MVI C,00H
+0003   0005 7C          	MOV A,H
+0004   0006 BD          	CMP L
+0005   0007 76          	HLT
+0006   0008             .END
+Number of errors = 0

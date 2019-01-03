@@ -1,0 +1,16 @@
+0001   0000 06 05       	mvi b,05h
+0002   0002 0E 99       	mvi c,99h
+0003   0004 78          	mov a,b
+0004   0005 2F          	cma
+0005   0006 47          	mov b,a
+0006   0007 79          	mov a,c
+0007   0008 2F          	cma
+0008   0009 C6 01       	adi 01h
+0009   000B 4F          	mov c,a
+0010   000C 78          	mov a,b
+0011   000D D2 11 00    	jnc label
+0012   0010 04          	inr b
+0013   0011             label:
+0014   0011 76          	hlt
+0015   0012             .end
+Number of errors = 0
