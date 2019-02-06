@@ -1,0 +1,87 @@
+
+
+<html> 
+
+<head> 
+
+<script> 
+function fun()                                    
+{ 
+
+    var name = document.forms["RegForm"]["Name"];               
+
+    var email = document.forms["RegForm"]["EMail"];    
+
+    var phone = document.forms["RegForm"]["Telephone"];  
+
+    var password = document.forms["RegForm"]["Password"];  
+   
+    if (name.value == "")                                  
+
+    { 
+
+        window.alert("Please enter your name."); 
+
+        return false; 
+
+    } 
+
+       
+
+    if (email.value == "" || email.value.indexOf("@", 0) < 0 || email.value.indexOf(".", 0) < 0)                                   
+
+    { 
+
+        window.alert("Please enter a valid e-mail address."); 
+
+        return false; 
+
+    } 
+
+    if (password.value == "")                        
+
+    { 
+
+        window.alert("Please enter your password"); 
+
+        return false; 
+
+    } 
+  
+
+    if (phone.value.length != 10)                           
+
+    { 
+        window.alert("Please enter valid telephone number."); 
+
+        return false; 
+
+    } 
+
+    return true; 
+}</script> 
+
+</head>  
+
+<body> 
+
+<h1 style="text-align: center"> Validation form </h1>           
+
+<form name="RegForm" action="success.html" onsubmit="return fun()" method="post">  
+
+      
+    <p>Name: <input type="text" size=65 name="Name"> </p><br>        
+
+    <p>E-mail Address: <input type="text" size=65 name="EMail">  </p><br> 
+
+     <p>Password: <input type="text" size=65 name="Password"> </p><br> 
+
+    <p>Telephone: <input type="text" size=65 name="Telephone"> </p><br>   
+
+    <p><input type="submit" value="send" name="Submit"> </p>          
+
+</form> 
+
+</body> 
+
+</html> 

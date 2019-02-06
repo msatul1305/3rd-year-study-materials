@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Validation form</title>
+	</head>
+	<body>
+		<center><h1>Student form</h1></center>
+		<form>	
+			<center>
+				<table>
+					<tr>
+						<td>Name: </td>
+						<td><input type="text" name="Name" required></td>
+					</tr>
+					<tr>
+						<td>Password: </td>
+						<td><input type="password" id="p1" name="password" required></td>
+					</tr>
+					<tr>
+						<td>Confirm Password: </td>
+						<td><input type="password" id="p2" name="confirm password" required></td>
+					</tr>
+				</table>
+			</center>
+			</br>
+			<center><button id="Submit">Submit</button></center>
+		</form>	
+		<Script type="text/javascript">
+			var p1=document.querySelector("#p1");
+			var p2=document.querySelector("#p2");
+			var Submit=document.querySelector("#Submit");
+			function mismatch(){
+				if(p1.value!==p2.value)
+					alert("password mismatch");
+			}		
+			Submit.addEventListener("Click",mismatch);
+		</Script>
+	</body>
+</html>	
+				
