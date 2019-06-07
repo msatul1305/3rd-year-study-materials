@@ -1,0 +1,1 @@
+numlib::fibonacci(5)
